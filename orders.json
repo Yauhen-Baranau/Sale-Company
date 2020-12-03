@@ -1,0 +1,13 @@
+
+
+
+{ 
+    
+    "orders" : [   
+    {"product":"Iphone 5", "price":500, "quantity": 1, "clientName":"Артем", "adress":"Лынькова 99-66", "courier": "Вадим",  "card": true,  "code":1, "statusCompleted": true},
+    {"product":"Iphone 4s", "price":300, "quantity": 1, "clientName":"Алексей", "adress":"Притыцкого 46-78", "courier": "Вадим",  "card": false,  "code":2, "statusCompleted": false},
+    {"product":"Iphone 11", "price":1000, "quantity": 1, "clientName":"Евгений", "adress":"Берута 5-63", "courier": "Алексей",  "card": false,  "code":3, "statusCompleted": false},
+    {"product":"Iphone 12", "price":1500, "quantity": 2, "clientName":"Кристина", "adress":"Мельникайте 44-6", "courier": "Вадим",  "card": false,  "code":4 , "statusCompleted": false}
+   ] 
+
+}  

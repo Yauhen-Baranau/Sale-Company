@@ -1,0 +1,10 @@
+.fl {
+
+    float: left;
+    display: block;
+    width: 200px;
+
+}
+.right {
+    color: red;
+}
