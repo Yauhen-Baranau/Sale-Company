@@ -82,7 +82,6 @@ var ajaxHandlerScript="https://fe.it-academy.by/AjaxStringStorage2.php";
       }
 
       orderAdd = (newOrder) =>{
-
         this.props.dispatch(addOrderAC(newOrder))
         var obj = store.getState()
         saveToServer(obj.orders.data)
