@@ -104,7 +104,7 @@ class Edit extends React.PureComponent {
                 <span className={'fl'}>Цена</span><input name={'price'} onChange={this.changeV} type={'text'} defaultValue={this.state.price}/><span className="right">{invalidPrice?"":' Введите цену числом'}</span><br/>
                 <span className={'fl'}>Количество</span><input name={'quantity'} onChange={this.changeV} type={'number'} defaultValue={this.state.quantity}/><span className="right">{(this.state.quantity==="")?" Please, fill the field!":''}</span><br/>
                 <span className={'fl'}>Имя клиента</span><input name={'clientName'} onChange={this.changeV} type={'text'} defaultValue={this.state.clientName}/><span className="right">{(this.state.clientName==="")?" Please, fill the field!":''}</span><br/>
-                <span className={'fl'}>Адресс доставки</span><input name={'adress'} onChange={this.changeV} type={'text'} defaultValue={this.state.adress}/><span className="right">{(this.state.adress==="")?" Please, fill the field!":''}</span><br/>
+                <span className={'fl'}>Адрес доставки</span><input name={'adress'} onChange={this.changeV} type={'text'} defaultValue={this.state.adress}/><span className="right">{(this.state.adress==="")?" Please, fill the field!":''}</span><br/>
                 <span className={'fl'}>Оплата</span><select name={'card'} onChange={this.changeV} defaultValue={this.state.card? 'card' : 'nal'}>
                                                                             <option value={'nal'}>Наличные</option>
                                                                             <option value={'card'}>Карта</option>
@@ -125,7 +125,7 @@ class Edit extends React.PureComponent {
                 <span className={'fl'}>Цена</span><input name={'price'} onChange={this.changeV} type={'text'} /><span className="right">{invalidPrice?"":' Введите цену числом'}</span><br/>
                 <span className={'fl'}>Количество</span><input name={'quantity'} onChange={this.changeV} type={'number'} /><span className="right">{(this.state.quantity==="")?" Please, fill the field!":''}</span><br/>
                 <span className={'fl'}>Имя клиента</span><input name={'clientName'} onChange={this.changeV} type={'text'} /><span className="right">{(this.state.clientName==="")?" Please, fill the field!":''}</span><br/>
-                <span className={'fl'}>Адресс доставки</span><input name={'adress'} onChange={this.changeV} type={'text'} /><span className="right">{(this.state.adress==="")?" Please, fill the field!":''}</span><br/>
+                <span className={'fl'}>Адрес доставки</span><input name={'adress'} onChange={this.changeV} type={'text'} /><span className="right">{(this.state.adress==="")?" Please, fill the field!":''}</span><br/>
                 <span className={'fl'}>Оплата</span><select name={'card'} onChange={this.changeV} >
                                                                             <option value={'nal'}>Наличные</option>
                                                                             <option value={'card'}>Карта</option>

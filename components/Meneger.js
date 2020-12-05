@@ -66,9 +66,9 @@ idSelect = (id) => {
   
     return (
    <div>
-      <h2>Meneger Department</h2>
+      <h2>Manager Department</h2>
       <br/>
-     <button onClick={this.setWorkModetoAdd}>Приянть заказ</button>
+     <button onClick={this.setWorkModetoAdd}>Принять заказ</button>
      <br/>
        {this.state.workMode>0 &&
         <Edit newId={this.state.newId} workMode={this.state.workMode} key={this.state.selected_id} order={this.state.selected_order}/>
@@ -76,7 +76,7 @@ idSelect = (id) => {
        <br/>
         <table>
           <tbody>
-          <tr><th>номер заказа</th><th>товар</th><th>цена</th><th>количество</th><th>имя клиента</th><th>адресс доставки</th><th>оплата</th><th>статус</th></tr>
+          <tr><th>номер заказа</th><th>товар</th><th>цена</th><th>количество</th><th>имя клиента</th><th>адрес доставки</th><th>оплата</th><th>статус</th></tr>
           {ordersList}
           </tbody>
         </table>

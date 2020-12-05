@@ -44,11 +44,11 @@ class Logistics extends React.PureComponent {
 
      <div>
        <h2>Logistics Department</h2>
-       <div><button onClick={this.showAll}>Все заказы</button><button onClick={this.showAssigned}>Назначенные</button><button onClick={this.showNotAssigned}>Не назначеннын</button></div>
+       <div><button onClick={this.showAll}>Все заказы</button><button onClick={this.showAssigned}>Назначенные</button><button onClick={this.showNotAssigned}>Не назначенные</button></div>
         <br/>
         <table>
           <tbody>
-          <tr><th>номер заказа</th><th>товар</th><th>количество</th><th>адресс доставки</th><th>курьер</th><th>статус</th></tr>
+          <tr><th>номер заказа</th><th>товар</th><th>количество</th><th>адрес доставки</th><th>курьер</th><th>статус</th></tr>
           {ordersList}
           </tbody>
         </table>
