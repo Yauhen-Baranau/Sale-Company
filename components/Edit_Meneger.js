@@ -122,7 +122,7 @@ class Edit extends React.PureComponent {
             <div> 
                 <span className={'fl'}>Номер заказа</span><span name={'code'}  onChange={this.changeV}>{this.props.newId}</span><br/>
                 <span className={'fl'}>Товар</span><input  onChange={this.changeV} name={'product'} type={'text'} /><span className="right">{(this.state.product==="")?" Please, fill the field!":''}</span><br/>
-                <span className={'fl'}>Цена</span><input name={'price'} onChange={this.changeV} type={'text'} /><span className="right">{invalidPrice?"":' Введите цену числом'}</span><br/>
+                <span className={'fl'}>Цена</span><input name={'price'} onChange={this.changeV} type={'text'} /><span className="right">{invalidPrice?"": "Please, fill the field!"}</span><br/>
                 <span className={'fl'}>Количество</span><input name={'quantity'} onChange={this.changeV} type={'number'} /><span className="right">{(this.state.quantity==="")?" Please, fill the field!":''}</span><br/>
                 <span className={'fl'}>Имя клиента</span><input name={'clientName'} onChange={this.changeV} type={'text'} /><span className="right">{(this.state.clientName==="")?" Please, fill the field!":''}</span><br/>
                 <span className={'fl'}>Адрес доставки</span><input name={'adress'} onChange={this.changeV} type={'text'} /><span className="right">{(this.state.adress==="")?" Please, fill the field!":''}</span><br/>
