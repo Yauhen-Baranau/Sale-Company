@@ -74,7 +74,7 @@ removeOrder = () => {
   render(){
   
     let orderStatus = (this.props.details.statusCompleted);
-    let stringOrderStatus = (orderStatus)? 'Выполнен' : 'не выполнен';
+    let stringOrderStatus = (orderStatus)? 'Выполнен' : 'Не выполнен';
     let ClassNameOrderStatus = (orderStatus)? 'complited': 'incompiled';
 
     let couriers = ['Вадим','Алексей','Не назначен'];
@@ -117,7 +117,7 @@ return(
 {this.props.mode==='courier' &&
    <Fragment>
      <li>
-  <b>Адресс досатвки: </b> {this.props.details.adress} <b>Имя клиента:</b> {this.props.details.clientName} <span className={ClassNameOrderStatus}>{stringOrderStatus}</span> <button onClick={this.setShowModeCourier}>{(this.state.showModeCourier)?'Скрыть':'Детали'}</button> <br/>
+  <b>Адрес доставки: </b> {this.props.details.adress} <b>Имя клиента:</b> {this.props.details.clientName} <span className={ClassNameOrderStatus}>{stringOrderStatus}</span> <button onClick={this.setShowModeCourier}>{(this.state.showModeCourier)?'Скрыть':'Детали'}</button> <br/>
     </li>
     { (this.state.showModeCourier)?
     <div>
