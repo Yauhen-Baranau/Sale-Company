@@ -98,19 +98,21 @@ class Edit extends React.PureComponent {
 <br/>
          { this.props.workMode===1? // edit
          <Fragment>
-            <div> 
-                <span className={'fl'}>Номер заказа</span><span name={'code'} onChange={this.changeV}>{this.state.code}</span><br/>
-                <span className={'fl'}>Товар</span><input  onChange={this.changeV} name={'product'} type={'text'} defaultValue={this.state.product}/><span className="right">{(this.state.product==="")?" Please, fill the field!":''}</span><br/>
-                <span className={'fl'}>Цена</span><input name={'price'} onChange={this.changeV} type={'text'} defaultValue={this.state.price}/><span className="right">{invalidPrice?"":' Введите цену числом'}</span><br/>
-                <span className={'fl'}>Количество</span><input name={'quantity'} onChange={this.changeV} type={'number'} defaultValue={this.state.quantity}/><span className="right">{(this.state.quantity==="")?" Please, fill the field!":''}</span><br/>
-                <span className={'fl'}>Имя клиента</span><input name={'clientName'} onChange={this.changeV} type={'text'} defaultValue={this.state.clientName}/><span className="right">{(this.state.clientName==="")?" Please, fill the field!":''}</span><br/>
-                <span className={'fl'}>Адрес доставки</span><input name={'adress'} onChange={this.changeV} type={'text'} defaultValue={this.state.adress}/><span className="right">{(this.state.adress==="")?" Please, fill the field!":''}</span><br/>
+            <div className='edited'> 
+                <span className={'fl'}><b>Номер заказа:</b></span><span name={'code'} onChange={this.changeV}>{this.state.code}</span><br/>
+                <span className={'fl'}>Товар</span><input  onChange={this.changeV} name={'product'} type={'text'} defaultValue={this.state.product}/><span className="right">{(this.state.product==="")?" Введите товар":''}</span><br/>
+                <span className={'fl'}>Цена</span><input name={'price'} onChange={this.changeV} type={'text'} defaultValue={this.state.price}/><span className="right">{invalidPrice?"":' Введите цену цифрой'}</span><br/>
+                <span className={'fl'}>Количество</span><input name={'quantity'} onChange={this.changeV} type={'number'} defaultValue={this.state.quantity}/><span className="right">{(this.state.quantity==="")?" Введите количество":''}</span><br/>
+                <span className={'fl'}>Имя клиента</span><input name={'clientName'} onChange={this.changeV} type={'text'} defaultValue={this.state.clientName}/><span className="right">{(this.state.clientName==="")?" Введите имя клиента":''}</span><br/>
+                <span className={'fl'}>Адрес доставки</span><input name={'adress'} onChange={this.changeV} type={'text'} defaultValue={this.state.adress}/><span className="right">{(this.state.adress==="")?" Введите адрес":''}</span><br/>
                 <span className={'fl'}>Оплата</span><select name={'card'} onChange={this.changeV} defaultValue={this.state.card? 'card' : 'nal'}>
                                                                             <option value={'nal'}>Наличные</option>
                                                                             <option value={'card'}>Карта</option>
                                                                         </select><br/>
-                <input disabled={invalid} onClick={this.saveChanges}  type="button" defaultValue="Сохранить"/> 
+                                                                        <div className='buttons'>
+                <input disabled={invalid} onClick={this.saveChanges}   type="button" defaultValue="Сохранить"/> 
                 <input  type="button" onClick={this.cencel} defaultValue="Отмена"/>
+                </div>
             </div> 
     
           </Fragment> :null
@@ -119,19 +121,22 @@ class Edit extends React.PureComponent {
           <Fragment>
         
             
-            <div> 
-                <span className={'fl'}>Номер заказа</span><span name={'code'}  onChange={this.changeV}>{this.props.newId}</span><br/>
-                <span className={'fl'}>Товар</span><input  onChange={this.changeV} name={'product'} type={'text'} /><span className="right">{(this.state.product==="")?" Please, fill the field!":''}</span><br/>
-                <span className={'fl'}>Цена</span><input name={'price'} onChange={this.changeV} type={'text'} /><span className="right">{invalidPrice?"": "Please, fill the field!"}</span><br/>
-                <span className={'fl'}>Количество</span><input name={'quantity'} onChange={this.changeV} type={'number'} /><span className="right">{(this.state.quantity==="")?" Please, fill the field!":''}</span><br/>
-                <span className={'fl'}>Имя клиента</span><input name={'clientName'} onChange={this.changeV} type={'text'} /><span className="right">{(this.state.clientName==="")?" Please, fill the field!":''}</span><br/>
-                <span className={'fl'}>Адрес доставки</span><input name={'adress'} onChange={this.changeV} type={'text'} /><span className="right">{(this.state.adress==="")?" Please, fill the field!":''}</span><br/>
+            <div className='add'> 
+                <span className={'fl'}><b>Номер заказа:</b></span><span name={'code'}  onChange={this.changeV}>{this.props.newId}</span><br/>
+                <span className={'fl'}>Товар</span><input  onChange={this.changeV} name={'product'} type={'text'} /><span className="right">{(this.state.product==="")?" Введите товар":''}</span><br/>
+                <span className={'fl'}>Цена</span><input name={'price'} onChange={this.changeV} type={'text'} /><span className="right">{invalidPrice?"": " Введите цену цифрой"}</span><br/>
+                <span className={'fl'}>Количество</span><input name={'quantity'} onChange={this.changeV} type={'number'} /><span className="right">{(this.state.quantity==="")?" Введите количество":''}</span><br/>
+                <span className={'fl'}>Имя клиента</span><input name={'clientName'} onChange={this.changeV} type={'text'} /><span className="right">{(this.state.clientName==="")?" Введите имя клиента":''}</span><br/>
+                <span className={'fl'}>Адрес доставки</span><input name={'adress'} onChange={this.changeV} type={'text'} /><span className="right">{(this.state.adress==="")?" Введите адрес":''}</span><br/>
                 <span className={'fl'}>Оплата</span><select name={'card'} onChange={this.changeV} >
                                                                             <option value={'nal'}>Наличные</option>
                                                                             <option value={'card'}>Карта</option>
                                                                         </select><br/>
+                <div className='buttons'>
                 <input disabled={invalid} onClick={this.saveChanges}  type="button" defaultValue="Сохранить"/> 
                 <input onClick={this.cencel}  type="button" defaultValue="Отмена"/>
+                </div>
+                
             </div> 
             
             </Fragment>

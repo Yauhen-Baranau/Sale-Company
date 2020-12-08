@@ -9,13 +9,13 @@ class PagesLinks extends React.Component {
   render() {
 
     return (
-      <div className='links'>
-        <NavLink to="/director" exact className="PageLink" activeClassName="ActivePageLink">Director</NavLink>
-        <NavLink to="/meneger" className="PageLink" activeClassName="ActivePageLink">Manager</NavLink>
-        <NavLink to="/logistics" className="PageLink" activeClassName="ActivePageLink">Logistics</NavLink>
-        <NavLink to="/courier_Alex" className="PageLink" activeClassName="ActivePageLink">Courier Alex</NavLink>
-        <NavLink to="/courier_Vadim" className="PageLink" activeClassName="ActivePageLink">Courier Vadim</NavLink>
-      </div>
+      <ul className='links'>
+        <li><NavLink to="/director" exact className="PageLink" activeClassName="ActivePageLink">Director</NavLink></li>
+        <li><NavLink to="/meneger" className="PageLink" activeClassName="ActivePageLink">Manager</NavLink></li>
+        <li><NavLink to="/logistics" className="PageLink" activeClassName="ActivePageLink">Logistics</NavLink></li>
+        <li><NavLink to="/courier_Alex" className="PageLink" activeClassName="ActivePageLink">Courier Alex</NavLink></li>
+        <li><NavLink to="/courier_Vadim" className="PageLink" activeClassName="ActivePageLink">Courier Vadim</NavLink></li>
+      </ul>
     );
     
   }

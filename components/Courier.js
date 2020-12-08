@@ -44,7 +44,7 @@ class Courier extends React.PureComponent {
 
    return (
 
-     <div>
+     <div className='courier'>
        <h2>Courier {this.props.courierName} </h2>
        
       

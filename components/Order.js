@@ -89,30 +89,28 @@ return(
 <Fragment>
     {this.props.mode==='meneger' &&
     <tr>
-    <td>{this.props.details.code}</td>
-    <td>{this.props.details.product}</td>
-    <td>{this.props.details.price+' $'}</td>
-    <td>{this.props.details.quantity}</td>
-    <td>{this.props.details.clientName}</td>
-    <td>{this.props.details.adress}</td>
-    <td>{this.props.details.card? 'Карта' : 'Наличные'}</td>
+    <td aria-label="Номер заказа">{this.props.details.code}</td>
+    <td aria-label="Товар">{this.props.details.product}</td>
+    <td aria-label="Цена">{this.props.details.price+' $'}</td>
+    <td aria-label="Количество">{this.props.details.quantity}</td>
+    <td aria-label="Имя клиента">{this.props.details.clientName}</td>
+    <td aria-label="Адрес">{this.props.details.adress}</td>
+    <td aria-label="Оплата">{this.props.details.card? 'Карта' : 'Наличные'}</td>
     <td className={ClassNameOrderStatus}>{stringOrderStatus}</td>
     <td><button  onClick={this.showEditOrder}>Редактировать</button></td>
     <td><button onClick={this.removeOrder}>Удалить</button></td>
-
-</tr> 
+   </tr> 
     }
 
 {this.props.mode==='logistics' &&
     <tr>
-    <td>{this.props.details.code}</td>
-    <td>{this.props.details.product}</td>
-    <td>{this.props.details.quantity}</td>
-    <td>{this.props.details.adress}</td>
-    <td>{select}</td>
-  <td className={ClassNameOrderStatus}>{stringOrderStatus}</td>
-    
-</tr> 
+    <td aria-label="Номер заказа">{this.props.details.code}</td>
+    <td aria-label="Товар">{this.props.details.product}</td>
+    <td aria-label="Количество">{this.props.details.quantity}</td>
+    <td aria-label="Адрес доставки">{this.props.details.adress}</td>
+    <td aria-label="Курьер">{select}</td>
+    <td aria-label="Статус" className={ClassNameOrderStatus}>{stringOrderStatus}</td>
+  </tr> 
 
 }
 
@@ -140,7 +138,7 @@ return(
    <button onClick={this.saveValue}>сохранить</button>
     </div> : null
   }
-    <hr/>
+ 
    </Fragment>
 
     }

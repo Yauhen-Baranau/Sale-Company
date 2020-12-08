@@ -46,7 +46,7 @@ class Logistics extends React.PureComponent {
        <h2>Logistics Department</h2>
        <div><button onClick={this.showAll}>Все заказы</button><button onClick={this.showAssigned}>Назначенные</button><button onClick={this.showNotAssigned}>Не назначенные</button></div>
         <br/>
-        <table>
+        <table >
           <tbody>
           <tr><th>номер заказа</th><th>товар</th><th>количество</th><th>адрес доставки</th><th>курьер</th><th>статус</th></tr>
           {ordersList}
@@ -54,7 +54,7 @@ class Logistics extends React.PureComponent {
         </table>
         <br/>
         
-        <hr/>
+      
     </div>
     );
   }
