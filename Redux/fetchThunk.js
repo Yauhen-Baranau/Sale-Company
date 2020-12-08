@@ -23,7 +23,7 @@ function ordersThunkAC(dispatch) {
         .then( (data) => {
           let dataList = JSON.parse(data.result)
           this.props.dispatch( ordersSetAC(dataList ) ); // переводим раздел orders стора в состояние "ошибка"
-          console.log(dataList)
+        
           
          })
         .catch( (error) => {

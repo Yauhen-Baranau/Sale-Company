@@ -60,7 +60,7 @@ idSelect = (id) => {
  
 
  render() {
-    console.log('Meneger rendered')
+    
     var ordersList = this.props.ordersList.map( i => {
           return <Order mode={this.props.mode} couriers={this.props.couriers} details={i} key = {i.code} />
     });

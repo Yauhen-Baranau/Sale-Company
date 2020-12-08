@@ -23,7 +23,7 @@ function ordersReducer(state=initState,action) {
   }
      
      case ORDER_STATUS_CHANGE: {
-       console.log(action.orderObject)
+      
       let arrData = [...state.data.orders]
       let changed = false;
         arrData.forEach((v,i) =>{

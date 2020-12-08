@@ -49,15 +49,15 @@ var ajaxHandlerScript="https://fe.it-academy.by/AjaxStringStorage2.php";
                 return response.json();
         })
         .then( (data) => {
-          console.log('читаю строку...')
+          
           let dataList = JSON.parse(data.result)
-          this.props.dispatch( ordersSetAC(dataList ) ); // переводим раздел orders стора в состояние "ошибка"
+          this.props.dispatch( ordersSetAC(dataList ) )
          
           
          })
         .catch( (error) => {
             console.error(error);
-            this.props.dispatch( ordersErrorAC() ); // переводим раздел orders стора в состояние "ошибка"
+            this.props.dispatch( ordersErrorAC() )
           })
 
         myEvents.addListener('dataSave', this.dataSave)

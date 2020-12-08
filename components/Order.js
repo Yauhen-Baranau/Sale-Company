@@ -72,7 +72,7 @@ removeOrder = () => {
 
 
   render(){
-    console.log('Order rendered ID ' + this.props.details.code )
+  
     let orderStatus = (this.props.details.statusCompleted);
     let stringOrderStatus = (orderStatus)? 'Выполнен' : 'не выполнен';
     let ClassNameOrderStatus = (orderStatus)? 'complited': 'incompiled';

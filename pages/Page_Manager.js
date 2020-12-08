@@ -9,10 +9,7 @@ class Page_Meneger extends React.PureComponent {
    
           
   render() {
-
-
-console.log(this.props)
-    return (
+return (
       <Meneger mode={'meneger'} ordersList = {this.props.orders.data.orders}  />
     );
     

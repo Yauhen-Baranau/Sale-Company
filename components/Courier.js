@@ -30,19 +30,12 @@ class Courier extends React.PureComponent {
   }
 
  render() {
-    console.log('Courier rendered ' + this.props.courierName)
-
-
-
-    var ordersList = this.props.ordersList.map( i => {
+   var ordersList = this.props.ordersList.map( i => {
       if ( (this.state.showOrderStats==='all') || ((this.state.showOrderStats==='Incomplete')&& (i.statusCompleted!==true)) || ((this.state.showOrderStats==='complited')&&(i.statusCompleted===true)) )
           return <Order mode={this.props.mode} couriers={this.props.couriers} details={i} key = {i.code} />
     });
     
-
-
-
-   return (
+return (
 
      <div className='courier'>
        <h2>Courier {this.props.courierName} </h2>

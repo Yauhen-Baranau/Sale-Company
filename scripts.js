@@ -26,7 +26,7 @@ function saveToServer (o) {
      sp.append('f', 'UPDATE');
      sp.append('n', 'BARANAU_FD3');
      sp.append('p', pas);
-     sp.append('v', JSON.stringify(o) ) // значение
+     sp.append('v', JSON.stringify(o) ) 
  
      fetch(ajaxHandlerScript, { method: 'post', body: sp })
      .then( (response) => { //HTTP-ответ
@@ -35,8 +35,7 @@ function saveToServer (o) {
           Err.userMessage="Ошибка связи";
           throw Err;
       }
-      else
-          return console.log('данные загружены');
+      
   })
 }
 }

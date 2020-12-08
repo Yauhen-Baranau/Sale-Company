@@ -29,7 +29,7 @@ class Logistics extends React.PureComponent {
   }
 
  render() {
-    console.log('Logistics rendered')
+    
 
   
 

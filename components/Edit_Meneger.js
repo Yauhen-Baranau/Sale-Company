@@ -89,7 +89,7 @@ class Edit extends React.PureComponent {
 
     render(){
       var invalidPrice = (isNaN(this.state.price) || this.state.price==='') ? false : true
-      console.log(invalidPrice)
+      
       var invalid = (this.state.adress!==""&&this.state.clientName!==""&&this.state.price!==""&&this.state.quantity!==""&&this.state.product!=="")? false : true;
         
         return(
