@@ -1,13 +1,5 @@
 # Sale-Company
 
-React 
--GIT, WEBPACK, NPM, REDUX, JEST
--Component properties, Event handling, Component state
-- JSX
--Component life cycle
--EventEmitter
--Immutability
--Routing
 
 Project role: React app is a trading company.
 Project description: 
